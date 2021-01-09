@@ -1,0 +1,18 @@
+//Question link-https://edabit.com/challenge/Gpy2qSFnfhGJnWMMj
+function canNest(arr1, arr2) {
+//using the Spread Operator on Math.min() function.
+var min_arr1=Math.min(...arr1);
+var min_arr2=Math.min(...arr2);
+var max_arr1=Math.max(...arr1);
+var max_arr2=Math.max(...arr2);
+if(min_arr1>min_arr2 && max_arr1<max_arr2)return true;
+else return false;
+}
+/*
+Test Passed: Value == true
+Test Passed: Value == true
+Test Passed: Value == false
+Test Passed: Value == false
+Test Passed: Value == false
+*/
+//Help link:https://stackoverflow.com/questions/8934877/obtain-smallest-value-from-array-in-javascript
