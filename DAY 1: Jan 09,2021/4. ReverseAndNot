@@ -1,0 +1,66 @@
+Question link : //https://edabit.com/challenge/moK78CirzYbqk6g3z
+//We reverse 123 to get 321 and then add 123 to the end, resulting in 321123.
+function reverseAndNot(i) {
+var rev=0;
+var copy_i=i;
+while(copy_i!=0){
+	rev=(rev*10)+(copy_i%10);
+	copy_i=Math.floor(copy_i/10);
+}
+var res=rev.toString()+i.toString();
+return parseInt(res);
+}
+/*
+Test Passed: Value == 321123
+Test Passed: Value == 987654321123456800
+Test Passed: Value == 694496
+Test Passed: Value == 703307
+Test Passed: Value == 5500
+Test Passed: Value == 123321
+Test Passed: Value == 465564
+Test Passed: Value == 6666
+Test Passed: Value == 355553
+Test Passed: Value == 815518
+Test Passed: Value == 251152
+Test Passed: Value == 372273
+Test Passed: Value == 306603
+Test Passed: Value == 468864
+Test Passed: Value == 71170
+Test Passed: Value == 6996
+Test Passed: Value == 968869
+Test Passed: Value == 69960
+Test Passed: Value == 174471
+Test Passed: Value == 529925
+Test Passed: Value == 532235
+Test Passed: Value == 983389
+Test Passed: Value == 392293
+Test Passed: Value == 685586
+Test Passed: Value == 812218
+Test Passed: Value == 262262
+Test Passed: Value == 16610
+Test Passed: Value == 5775
+Test Passed: Value == 996699
+Test Passed: Value == 892298
+Test Passed: Value == 235532
+Test Passed: Value == 112211
+Test Passed: Value == 206602
+Test Passed: Value == 408804
+Test Passed: Value == 591195
+Test Passed: Value == 172271
+Test Passed: Value == 944449
+Test Passed: Value == 839938
+Test Passed: Value == 752257
+Test Passed: Value == 502205
+Test Passed: Value == 543345
+Test Passed: Value == 563365
+Test Passed: Value == 211112
+Test Passed: Value == 297792
+Test Passed: Value == 777777
+Test Passed: Value == 957759
+Test Passed: Value == 932239
+Test Passed: Value == 964469
+Test Passed: Value == 359953
+Test Passed: Value == 475574
+Test Passed: Value == 551155
+Test Passed: Value == 832238
+*/
