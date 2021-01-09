@@ -1,0 +1,19 @@
+//https://edabit.com/challenge/RiyXDZNZAD4fj9xfJ
+function clone(arr) {
+	arr=[...arr];//returns array  with braces
+	//arr.push(arr);
+	res=[];
+	for(var i=0;i<arr.length;i++){
+		res.push(arr[i]);
+	}
+	res.push(arr);
+	return res;
+}
+/*
+Test Passed: Value == '[1, 2, 3, [1, 2, 3]]'
+Test Passed: Value == "['x', 'y', ['x', 'y']]"
+Test Passed: Value == '[1, 1, [1, 1]]'
+Test Passed: Value == "['a', 'b', 'c', ['a', 'b', 'c']]"
+Test Passed: Value == '[[]]'
+*/
+/*HELP link:https://www.freecodecamp.org/news/how-to-clone-an-array-in-javascript-1d3183468f6a/*/
