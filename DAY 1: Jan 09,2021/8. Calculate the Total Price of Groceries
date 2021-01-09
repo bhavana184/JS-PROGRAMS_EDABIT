@@ -1,0 +1,17 @@
+//question link: https://edabit.com/challenge/jRSST87NjECBzbwzL
+function getTotalPrice(groceries) {
+	var total=0;
+	for(var j=0;j<groceries.length;j++){
+	total=total+(groceries[j].quantity *  groceries[j].price);
+	}
+	return parseFloat(total.toFixed(1));//round number to keep 1 decimal
+	//return total;
+}
+/*
+Test Passed: Value == 1.5
+Test Passed: Value == 4
+Test Passed: Value == 4.5
+Test Passed: Value == 10.4
+Test Passed: Value == 0.3
+*/
+//Help link: https://stackoverflow.com/questions/7342957/how-do-you-round-to-1-decimal-place-in-javascript
