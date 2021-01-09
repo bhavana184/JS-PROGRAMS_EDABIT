@@ -1,0 +1,9 @@
+//https://edabit.com/challenge/MvZK536X7fyrWH8Qc  - question link
+function giveMeSomething(a) {
+	return "something"+" "+a;
+}
+/*
+Test Passed: Value == 'something a'
+Test Passed: Value == 'something is cooking'
+Test Passed: Value == 'something  is cooking'
+*/
