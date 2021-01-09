@@ -1,5 +1,20 @@
 //Question link: https://edabit.com/challenge/G9pQikEexb3GDyGK3
-
+/*Create a function that takes an empty function as a string and returns the function as a arrow function.
+Examples
+"function test(a) {}" ➞  "const test = (a) =>"
+ 0        1       2       
+*/
+function toArrow(f) {
+	var s=f.split(" ");
+	//returns array by splitting string based on " " i.e space
+	var t=s[1].split("("); //returns {'test', 'a)'} 
+	return "const "+t[0]+" = ("+t[1]+" =>";
+	
+}
 /*
-
+Test Passed: Value == 'const test = (a) =>'
+Test Passed: Value == 'const twoArgs = (a,b) =>'
+Test Passed: Value == 'const restArgs = (...a) =>'
+Test Passed: Value == 'const restArgsArg = (...a,b) =>'
+Test Passed: Value == 'const threeArgs = (a,b,c) =>'
 */
