@@ -1,0 +1,18 @@
+//question link:https://edabit.com/challenge/humnHvXGXnBnStg5F
+function trace(arr) {
+	var trace=0;
+	for(var i=0;i<arr.length;i++){
+		for(var j=0;j<arr[0].length;j++){
+			if(i==j) trace=trace+arr[i][j];
+		}
+	}
+	return trace;
+}
+/*
+Test Passed: Value == 2
+Test Passed: Value == 15
+Test Passed: Value == 12345
+Test Passed: Value == 10
+Test Passed: Value == 0
+Test Passed: Value == 32
+*/
