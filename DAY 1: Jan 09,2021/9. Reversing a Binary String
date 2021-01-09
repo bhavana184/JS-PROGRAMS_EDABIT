@@ -1,0 +1,49 @@
+//question link: https://edabit.com/challenge/4s93F8ZiEdHjmMnMv
+/*function reverseString(str) {
+    return str.split("").reverse().join("");
+}*/
+function numToBinary(n){
+var bin="";
+while(n!=0){
+	var b=n%2;
+	bin=bin+b;
+	n=Math.floor(n/2);
+}
+/* To get correct binary number
+bin=reverseString(bin);	
+return parseInt(bin);
+*/
+return bin;//here bin contains reversed binary represntation
+}
+function reversedBinaryInteger(num) {
+	var res= numToBinary(num);
+	//var d=  Math.log2(num)+1;
+	//no. of bits in binary reresentation of this no.
+	var dec=0;
+	for(var i=res.length-1;i>=0;i--){
+		dec=dec+(res[i]*Math.pow(2,(res.length-1)-i))
+	}
+	return dec;
+}
+/*
+Test Passed: Value == 1
+Test Passed: Value == 1
+Test Passed: Value == 5
+Test Passed: Value == 31
+Test Passed: Value == 37
+Test Passed: Value == 45
+Test Passed: Value == 255
+Test Passed: Value == 251
+Test Passed: Value == 391
+Test Passed: Value == 377
+Test Passed: Value == 67
+Test Passed: Value == 263
+Test Passed: Value == 1937
+Test Passed: Value == 2487
+Test Passed: Value == 1
+Test Passed: Value == 10017
+Test Passed: Value == 328843
+Test Passed: Value == 904609
+Test Passed: Value == 681385
+Test Passed: Value == 1033263
+*/
