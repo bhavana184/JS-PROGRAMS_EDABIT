@@ -1,0 +1,17 @@
+//Question link: https://edabit.com/challenge/yX9LqcQ43nEXo5GS2
+function getXP(obj) {
+	var res="";
+	var sum=0;
+	var xp=5;
+	for(i in obj){
+		sum=sum+xp*obj[i];
+		xp=xp*2;
+	}
+	return res+sum+"XP";
+}
+
+/*
+Test Passed: Value == '2055XP'
+Test Passed: Value == '7650XP'
+Test Passed: Value == '2255XP'
+*/
