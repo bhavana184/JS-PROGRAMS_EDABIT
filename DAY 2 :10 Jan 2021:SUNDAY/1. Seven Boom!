@@ -1,0 +1,34 @@
+//question link: https://edabit.com/challenge/6R6gReGTGwzpwuffD
+//Create a function that takes an array of numbers and return "Boom!" if the digit 7 appears in the array.
+//Otherwise, return "there is no 7 in the array".
+function digit7(num){
+	while(num!=0){
+		var f=0;
+		var d=num%10;
+		if(d==7){
+			f=1;break;	
+		}
+		num=Math.floor(num/10);//num=num/10 returns float value, so need to take its integer val
+	}
+	if(f==1)return true;
+	else return false;
+}
+function sevenBoom(arr) {
+	var f=0;
+	for(var i =0;i<arr.length;i++){
+		if(digit7(arr[i])) {
+			f=1;
+			break;
+		}
+	}
+		if(f==1)return "Boom!";
+		else return "there is no 7 in the array";
+
+}
+/*
+Test Passed: Value == 'Boom!'
+Test Passed: Value == 'there is no 7 in the array'
+Test Passed: Value == 'there is no 7 in the array'
+Test Passed: Value == 'Boom!'
+Test Passed: Value == 'Boom!'
+*/
