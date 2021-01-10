@@ -1,0 +1,33 @@
+//question link: https://edabit.com/challenge/b7iHQDw72zzkmgCun
+//A boomerang is a V-shaped sequence that is either upright or upside down. Specifically, a boomerang can be defined as: sub-array of length 3, with the first and last digits being the same 
+//and the middle digit being different.
+//[3, 7, 3, 2, 1, 5, 1, 2, 2, -2, 2]
+// 3 boomerangs in this sequence:  [3, 7, 3], [1, 5, 1], [2, -2, 2]
+
+//[5, 5, 5] (triple identical digits) is NOT considered a boomerang
+//because the middle digit is identical to the first and last.
+
+function countBoomerangs(arr) {
+	var count=0;
+	for(var i=0;i<arr.length;i++){
+		var first=i,last=i+2,mid=i+1;
+		if((arr[first]==arr[last]) && (arr[first]!=arr[mid]))
+			count++;			
+	}
+		return count;
+}
+
+/*
+Test Passed: Value == 2
+Test Passed: Value == 1
+Test Passed: Value == 0
+Test Passed: Value == 3
+Test Passed: Value == 3
+Test Passed: Value == 0
+Test Passed: Value == 2
+Test Passed: Value == 2
+Test Passed: Value == 1
+Test Passed: Value == 3
+Test Passed: Value == 5
+Test Passed: Value == 0
+*/
