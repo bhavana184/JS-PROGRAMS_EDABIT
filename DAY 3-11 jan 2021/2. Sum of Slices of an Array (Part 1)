@@ -1,0 +1,25 @@
+//https://edabit.com/challenge/iaySFYs3oTQDboeqd
+function sumOfSlices(arr) {
+	var res=[];
+	var sum=0;
+	for(var i =0;i<arr.length;i++){
+		if(sum<=100){
+			sum=sum+arr[i];
+		}	
+		if(sum>100){
+			res.push(sum-arr[i]);
+			sum=arr[i];
+		 //if(i==arr.length-1)res.push(sum);
+		 }
+		if(sum<=100 && i==arr.length-1)res.push(sum);
+	}
+	//res.push(arr[arr.length-1]);
+	return res;
+}
+/*
+Test Passed: Value == '[97, 78, 87, 68, 100]'
+Test Passed: Value == '[99, 99, 10]'
+Test Passed: Value == '[13]'
+Test Passed: Value == '[62, 96, 94, 58, 64, 71, 80, 88, 42, 68, 95, 100, 99, 82, 93]'
+Test Passed: Value == '[45, 75, 47]'
+*/
