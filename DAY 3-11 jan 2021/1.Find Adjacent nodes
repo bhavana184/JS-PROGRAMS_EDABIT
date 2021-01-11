@@ -1,0 +1,4 @@
+//https://edabit.com/challenge/N7PGFudDcNh5aueS3
+function isAdjacent(matrix, node1, node2) {
+	return((matrix[node1][node2] && matrix[node2][node1]) ==1);
+}
