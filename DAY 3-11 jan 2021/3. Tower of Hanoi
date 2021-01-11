@@ -1,0 +1,13 @@
+//https://edabit.com/challenge/3ZtykTsx3GSoPHyBb
+function towerHanoi(discs) {
+	return Math.pow(2,discs)-1;
+}
+/*
+Test Passed: Value == 7
+Test Passed: Value == 31
+Test Passed: Value == 255
+Test Passed: Value == 524287
+Test Passed: Value == 511
+Test Passed: Value == 8191
+Test Passed: Value == 0
+*/
