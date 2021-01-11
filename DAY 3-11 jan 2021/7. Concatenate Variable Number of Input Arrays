@@ -1,0 +1,13 @@
+//https://edabit.com/challenge/Hs4TpDHX57Rqegmgg - question link
+function concat(...args) {
+var res=[];
+return res.concat(...args);
+}
+//HELP:https://www.w3schools.com/jsref/jsref_concat_array.asp
+/*
+Test Passed: Value == '[1, 2, 3, 4, 5, 6, 7]'
+Test Passed: Value == '[1, 2, 3, 4, 5, 6, 7]'
+Test Passed: Value == '[1, 2, 3, 4]'
+Test Passed: Value == '[4, 4, 4, 4, 4]'
+Test Passed: Value == "['a', 'b', 'c']"
+*/
