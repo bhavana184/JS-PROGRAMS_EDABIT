@@ -1,0 +1,41 @@
+//https://edabit.com/challenge/vrHDieytY657gYTcT
+function closingInSum(num) {
+	var str=num.toString();
+	var sum=0;
+	var dec=0;
+	for(var i=0,j=str.length-1;i<Math.ceil(str.length/2);i++,j--)
+		{
+			if(i==j)//for odd length number , center will have one digit
+				dec=parseInt(str[i]);
+			else
+				dec=parseInt(str[i])*10+parseInt(str[j]);//make two digit no. 
+			sum+=dec;
+		}
+	return sum;
+}
+/*
+Test Passed: Value == 205
+Test Passed: Value == 248
+Test Passed: Value == 13
+Test Passed: Value == 22
+Test Passed: Value == 100
+Test Passed: Value == 72
+Test Passed: Value == 331
+Test Passed: Value == 237
+Test Passed: Value == 160
+Test Passed: Value == 344
+Test Passed: Value == 294
+Test Passed: Value == 173
+Test Passed: Value == 139
+Test Passed: Value == 335
+Test Passed: Value == 327
+Test Passed: Value == 319
+Test Passed: Value == 388
+Test Passed: Value == 526
+Test Passed: Value == 298
+Test Passed: Value == 427
+Test Passed: Value == 273
+Test Passed: Value == 281
+Test Passed: Value == 156
+Test Passed: Value == 283
+*/
