@@ -1,0 +1,20 @@
+//https://edabit.com/challenge/5S5HBQW6zZp8eH3eL
+//string can't be changed, so create new string and append
+function uncensor(str, vowels) {
+	var res="";
+	for(var i=0,j=0;i<str.length;i++){
+		if(str[i]=='*'){
+			res=res+vowels[j];
+			j++;
+		}
+		else res=res+str[i];
+	}
+	return res;
+}
+/*
+Test Passed: Value == 'Where did my vowels go?'
+Test Passed: Value == 'abcd'
+Test Passed: Value == 'UPPERCASE'
+Test Passed: Value == 'Cheese, Grommit -- cheese'
+Test Passed: Value == 'Elephant'
+*/
