@@ -1,0 +1,31 @@
+//https://edabit.com/challenge/sPdaYSjgqpupa2B7q
+/*
+Create a function that takes an array and returns a new array containing only
+prime numbers.
+Examples
+filterPrimes([7, 9, 3, 9, 10, 11, 27]) ➞ [7, 3, 11]
+*/
+function checkPrime(n){
+	if(n==0||n==1)return false;
+	var f=0;
+	for(var i=2;i<n;i++){
+		if(n%i==0){
+			f=1;break;
+		}
+	}
+	if(f==1)return false;
+	else return true;
+}
+function filterPrimes(num) {
+	var res=[];
+	for(var i=0;i<num.length;i++){
+		if(checkPrime(num[i]))res.push(num[i]);
+	}
+	return res;
+}
+/*
+Test Passed: Value == '[7, 3, 11]'
+Test Passed: Value == '[2, 3, 5, 7, 11, 13, 17, 19, 23]'
+Test Passed: Value == '[1009, 3, 61, 1087, 1091, 1093, 1097]'
+Test Passed: Value == '[10007, 1009]'
+*/
