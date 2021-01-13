@@ -1,0 +1,22 @@
+//https://edabit.com/challenge/tWEsR6BY3qRFP3L8r
+function strMatchBy2char(a, b) {
+	var count=0;
+	var min=Math.min(a.length,b.length);
+	for(var i=0;i<min-1;i++){
+		if(a[i]==b[i] && a[i+1]==b[i+1])
+			count++;
+	}
+	return count;
+}
+/*
+Test Passed: Value == 3
+Test Passed: Value == 2
+Test Passed: Value == 0
+Test Passed: Value == 1
+Test Passed: Value == 1
+Test Passed: Value == 0
+Test Passed: Value == 0
+Test Passed: Value == 1
+Test Passed: Value == 3
+Test Passed: Value == 3
+*/
