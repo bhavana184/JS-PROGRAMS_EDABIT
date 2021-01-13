@@ -1,0 +1,23 @@
+//https://edabit.com/challenge/wYdQGudMRdzME5B7m
+function leader(arr) {
+	var res=[];
+	//var f=0;
+	for(var i=0;i<arr.length;i++){
+		var f=0;
+		for(var j=i+1;j<arr.length;j++){
+			if(arr[j]>=arr[i])
+				{f=1;
+					break;
+				}
+		}
+		if(f==0) res.push(arr[i]);
+	}
+	return res;
+}
+/*
+Test Passed: Value == '[20, 15, 8, 3]'
+Test Passed: Value == '[26, 3]'
+Test Passed: Value == '[10]'
+Test Passed: Value == '[500, 400, 300, 200, 100, 50, 10, 5]'
+Test Passed: Value == '[10, 5]'
+*/
