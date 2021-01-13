@@ -1,0 +1,23 @@
+//https://edabit.com/challenge/ERmrS3QrK7sEt4PAt
+function find_hcf(n1,n2){
+var dividend=(n1>=n2)?n1:n2;
+	var divisor=(n1<=n2)?n1:n2;
+	while(divisor!=0){
+		var rem=dividend%divisor;
+		dividend=divisor;
+		divisor=rem;
+	}
+	return dividend;
+}
+function lcm(n1, n2) {
+	var h=find_hcf(n1,n2);
+	return Math.floor((n1*n2)/h);
+}
+/*
+Test Passed: Value == 18
+Test Passed: Value == 40
+Test Passed: Value == 187
+Test Passed: Value == 85
+Test Passed: Value == 12
+Test Passed: Value == 9
+*/
