@@ -1,0 +1,28 @@
+//https://edabit.com/challenge/tRx22rECqK4dTJTg8
+function combinations(items) {
+	var length = arguments.length;
+  var res= 1;
+  for (var i = 0; i < length; i+=1) {
+		if (arguments[i]) {
+			res *= arguments[i]
+		}
+  }
+  return res;
+}
+//arguments is an Array-like object accessible inside
+//functions that contains the values of the arguments passed to that function.
+/*arguments[0] // first argument
+arguments[1] // second argument
+arguments[2] // third argument*/
+/*
+Test Passed: Value == 2
+Test Passed: Value == 6
+Test Passed: Value == 15
+Test Passed: Value == 210
+Test Passed: Value == 625
+Test Passed: Value == 162
+Test Passed: Value == 3628800
+Test Passed: Value == 120
+Test Passed: Value == 1680
+Test Passed: Value == 42
+*/
