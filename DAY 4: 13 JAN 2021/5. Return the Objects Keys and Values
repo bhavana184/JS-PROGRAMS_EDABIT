@@ -1,0 +1,15 @@
+//https://edabit.com/challenge/AP4hnF97anRc2mAZ6
+function keysAndValues(obj) {
+	var res=[];
+	//res=[...res];
+	res.push(Object.keys(obj),Object.values(obj));
+	return res;
+}
+/*
+Test Passed: Value == "[['a', 'b', 'c'], [1, 2, 3]]"
+Test Passed: Value == "[['a', 'b', 'c'], ['Apple', 'Microsoft', 'Google']]"
+Test Passed: Value == "[['key1', 'key2', 'key3'], [true, false, undefined]]"
+Test Passed: Value == "[['1', '2', '3'], [null, null, null]]"
+Test Passed: Value == "[['key1', 'key2', 'key3'], ['cat', 'dog', null]]"
+*/
+
