@@ -1,0 +1,42 @@
+//https://edabit.com/challenge/KjSae7LTFzYTC256A
+function isPerfectSquare(n)
+{
+    var sqrt=Math.sqrt(n);
+		return ((sqrt-Math.floor(sqrt))==0);
+}
+function isSastry(number) {
+	var res="";
+	var succ=number+1;
+	res=res+number+succ;
+	//if(isPerfectSquare(parseInt(res))) return true;
+	//else return false;
+	return isPerfectSquare(parseInt(res));
+}
+/*
+Test Passed: Value == true
+Test Passed: Value == false
+Test Passed: Value == true
+Test Passed: Value == false
+Test Passed: Value == true
+Test Passed: Value == true
+Test Passed: Value == false
+Test Passed: Value == true
+Test Passed: Value == false
+Test Passed: Value == true
+Test Passed: Value == false
+Test Passed: Value == true
+*/
+/*
+Test.assertEquals(isSastry(183), true, "Example #1")
+Test.assertEquals(isSastry(184), false, "Example #2")
+Test.assertEquals(isSastry(106755), true, "Example #3")
+Test.assertEquals(isSastry(129987253440921), false)
+Test.assertEquals(isSastry(157175907513603), true)
+Test.assertEquals(isSastry(206611570247935), true)
+Test.assertEquals(isSastry(338752188230098), false)
+Test.assertEquals(isSastry(433610247875715), true)
+Test.assertEquals(isSastry(652333983478884), false)
+Test.assertEquals(isSastry(718717107443715), true)
+Test.assertEquals(isSastry(752199872453889), false)
+Test.assertEquals(isSastry(786704531939448), true)
+*/
