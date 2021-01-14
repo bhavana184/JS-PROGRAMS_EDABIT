@@ -1,0 +1,37 @@
+//https://edabit.com/challenge/JAgtuPDXj6BrDMxa5
+function countDigits(n){
+	var c=0;
+	while(n>0){
+		c++;
+		n=Math.floor(n/10);
+	}
+	return c;
+}
+function mean(num) {
+	var sum=0;
+	var n1=num;
+	while(num>0){
+		var d=num%10;
+		sum=sum+d;
+		num=Math.floor(num/10);
+	}
+	return Math.floor(sum/countDigits(n1));
+}
+/*
+Test Passed: Value == 6
+Test Passed: Value == 4
+Test Passed: Value == 8
+Test Passed: Value == 4
+Test Passed: Value == 4
+Test Passed: Value == 3
+Test Passed: Value == 3
+*/
+/*
+Test.assertEquals(mean(666), 6)
+Test.assertEquals(mean(80), 4)
+Test.assertEquals(mean(789), 8)
+Test.assertEquals(mean(417), 4)
+Test.assertEquals(mean(1357), 4)
+Test.assertEquals(mean(42), 3)
+Test.assertEquals(mean(12345), 3)
+*/
