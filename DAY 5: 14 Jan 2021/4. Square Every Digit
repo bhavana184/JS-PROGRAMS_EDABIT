@@ -1,0 +1,52 @@
+//https://edabit.com/challenge/Tnjbf6pdFsCjmaF8p
+function reverse(n){
+	var rev=0;
+	var res="";
+	while(n>0){
+		//var d=n%10;
+		//if(d==0)res=res+d;
+		rev=(rev*10)+(n%10);
+		n=Math.floor(n/10);
+	}
+	//res=res+rev;
+	//return parseInt(res);
+	return rev;
+}
+function squareDigits(n) {
+	var res="";
+	var num=reverse(n);
+	while(num>0){
+		var d=num%10;
+		var sq=d*d;
+		res=res+sq;
+		num=Math.floor(num/10);
+	}
+	if(n%10==0)res=res+0;
+	return parseInt(res);
+}
+/*
+Test Passed: Value == 811181
+Test Passed: Value == 6449436
+Test Passed: Value == 8149369
+Test Passed: Value == 4490
+Test Passed: Value == 4498149
+Test Passed: Value == 499
+Test Passed: Value == 4916949
+Test Passed: Value == 416649
+Test Passed: Value == 2549164
+Test Passed: Value == 2536936
+Test Passed: Value == 64161
+*/
+/*
+Test.assertEquals(squareDigits(9119), 811181)
+Test.assertEquals(squareDigits(8726), 6449436)
+Test.assertEquals(squareDigits(9763), 8149369)
+Test.assertEquals(squareDigits(2230), 4490)
+Test.assertEquals(squareDigits(2797), 4498149)
+Test.assertEquals(squareDigits(233), 499)
+Test.assertEquals(squareDigits(7437), 4916949)
+Test.assertEquals(squareDigits(2483), 416649)
+Test.assertEquals(squareDigits(5742), 2549164)
+Test.assertEquals(squareDigits(5636), 2536936)
+Test.assertEquals(squareDigits(841), 64161)
+*/
