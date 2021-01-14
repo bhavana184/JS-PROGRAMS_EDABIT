@@ -1,0 +1,46 @@
+//https://edabit.com/challenge/D5GzkngEBCHmAbcFd
+function mul(A1, A2) {
+	var r1=A1.length;//A1 ROW
+	var c1=A1[0].length;//A1 COLUMN
+	var r2=A2.length;//a2 ROW
+	var c2=A2[0].length;//A2 COLUMN
+	if(c1!=r2)    return "ERROR";
+	var res=new Array(r1);
+	for(var i=0;i<r1;i++){
+				res[i]=new Array(c2);
+	}
+	/*for(var i=0;i<p;i++){
+		for(var j=0;j<n;j++){
+				res[i][j]=0;
+			}
+		}*/
+	for(var i=0;i<r1;i++){
+		for(var j=0;j<c2;j++){
+				res[i][j]=0;
+			for(var k=0;k<c2;k++){
+				res[i][j]+=A1[i][k]*A2[k][j];
+			}
+		}
+	}
+	return res;
+}
+/*
+Test Passed: Value == '[[30, 36, 42], [66, 81, 96], [102, 126, 150]]'
+Test Passed: Value == 'ERROR'
+Test Passed: Value == 'ERROR'
+FAILED: Expected: '[[14]]', instead got: '[[1]]'
+FAILED: TypeError: Cannot read property '0' of undefined
+    at mul
+            at Object.handleError
+        at Script.runInThisContext
+    at Object.runInThisContext
+        /main/eval_string.js:23:3
+ */
+ /*
+ Test.assertSimilar(mul([[1,2,3],[4,5,6],[7,8,9]],[[1,2,3],[4,5,6],[7,8,9]]), [[30,36,42],[66,81,96],[102,126,150]])
+Test.assertEquals(mul([[1,2],[4,5]],[[1,2,3],[4,5,6],[7,8,9]]), "ERROR")
+Test.assertEquals(mul([[1,2,3],[4,5,6],[7,8,9]],[[1,2],[4,5]]), "ERROR")
+Test.assertSimilar(mul([[1,2,3]],[[1],[2],[3]]), [[14]])
+Test.assertSimilar(mul([[1],[2],[3]], [[1,2,3]]), [[1,2,3],[2,4,6],[3,6,9]])
+Test.assertSimilar(mul([[8,8],[8,8]],[[7,7],[7,7]]), [[112,112],[112,112]])
+ */
