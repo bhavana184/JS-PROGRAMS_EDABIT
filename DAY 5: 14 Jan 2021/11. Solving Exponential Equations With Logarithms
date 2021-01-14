@@ -1,0 +1,22 @@
+//https://edabit.com/challenge/PXau3Fzk8GXgF6oRQ
+function solveForExp(a, b) {
+	return Math.floor(Math.log10(b)/Math.log10(a));
+}
+/*
+Test Passed: Value == 5
+Test Passed: Value == 10
+Test Passed: Value == 10
+Test Passed: Value == 16
+Test Passed: Value == 9
+Test Passed: Value == 6
+Test Passed: Value == 8
+*/
+/*
+Test.assertEquals(solveForExp(4, 1024), 5)
+Test.assertEquals(solveForExp(2, 1024), 10)
+Test.assertEquals(solveForExp(9, 3486784401), 10)
+Test.assertEquals(solveForExp(4, 4294967296), 16)
+Test.assertEquals(solveForExp(8, 134217728), 9)
+Test.assertEquals(solveForExp(19, 47045881), 6)
+Test.assertEquals(solveForExp(10, 100000000), 8)
+*/
