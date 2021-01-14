@@ -1,0 +1,31 @@
+//https://edabit.com/challenge/r453y7c3vBQz4Rrbn
+function fact(n){
+	var f=1;
+	for(var i=1;i<=n;i++)
+		f=f*i;
+	return f;
+}
+function paths(n) {
+//	return n*paths(n-1);//factorial using recursion
+	return fact(n);
+}
+/*
+Test Passed: Value == 1
+Test Passed: Value == 2
+Test Passed: Value == 6
+Test Passed: Value == 24
+Test Passed: Value == 120
+Test Passed: Value == 720
+Test Passed: Value == 5040
+Test Passed: Value == 40320
+*/
+/*
+Test.assertEquals(paths(1), 1)
+Test.assertEquals(paths(2), 2)
+Test.assertEquals(paths(3), 6)
+Test.assertEquals(paths(4), 24)
+Test.assertEquals(paths(5), 120)
+Test.assertEquals(paths(6), 720)
+Test.assertEquals(paths(7), 5040)
+Test.assertEquals(paths(8), 40320)
+*/
