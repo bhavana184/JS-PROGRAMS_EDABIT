@@ -1,0 +1,19 @@
+//https://edabit.com/challenge/RMZiERz2cbjmbXruY
+//https://www.mathsisfun.com/algebra/triangular-numbers.html
+function triangle(n) {
+	return Math.floor((n*(n+1))/2);
+}
+/*
+Test Passed: Value == 1
+Test Passed: Value == 3
+Test Passed: Value == 6
+Test Passed: Value == 36
+Test Passed: Value == 2318781
+*/
+/*
+Test.assertEquals(triangle(1), 1)
+Test.assertEquals(triangle(2), 3)
+Test.assertEquals(triangle(3), 6)
+Test.assertEquals(triangle(8), 36)
+Test.assertEquals(triangle(2153), 2318781)
+*/
