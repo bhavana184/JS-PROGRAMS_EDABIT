@@ -1,0 +1,37 @@
+//https://edabit.com/challenge/rSZmP2dWjEK8Gqcih
+function hcf(a,b){
+	var dividend=(a>=b)?a:b;
+	var divisor=(a<=b)?a:b;
+	while(divisor!=0){
+		var rem=dividend%divisor;
+		dividend=divisor;
+		divisor=rem;
+	}
+	return dividend;
+}
+function gcd(arr) {
+	var res=arr[0];
+	for(var i=1;i<arr.length;i++){
+		res=hcf(res,arr[i]);
+		 if(res == 1)  return 1; 
+	}
+	return res;
+}
+/*
+Test Passed: Value == 10
+Test Passed: Value == 1
+Test Passed: Value == 12
+Test Passed: Value == 1
+Test Passed: Value == 7
+Test Passed: Value == 20
+Test Passed: Value == 43
+*/
+/*
+Test.assertEquals(gcd([10, 20, 40]), 10)
+Test.assertEquals(gcd([7, 11]), 1)
+Test.assertEquals(gcd([156, 84, 60, 1188, 252]), 12)
+Test.assertEquals(gcd([1, 2, 3, 4, 5]), 1)
+Test.assertEquals(gcd([777, 77, 7, 14]), 7)
+Test.assertEquals(gcd([20, 20, 40, 100]), 20)
+Test.assertEquals(gcd([731, 43, 473, 2623]), 43)
+*/
