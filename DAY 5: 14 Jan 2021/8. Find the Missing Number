@@ -1,0 +1,30 @@
+//https://edabit.com/challenge/rgdT9sZ4QhsKhaSw9
+function missingNum(arr) {
+	arr.sort(function(a,b){return (a-b)});
+	var i;
+	for(i=1;i<arr.length; i++){
+		if(arr[0]!=1){
+			return 1;
+		}
+		if(arr[arr.length-1]!=10){
+			return 10;
+		}
+		if(arr[i]-arr[i-1]>1){
+			return arr[i]-1;
+		}
+	}
+}
+/*
+Test Passed: Value == 5
+Test Passed: Value == 10
+Test Passed: Value == 1
+Test Passed: Value == 7
+Test Passed: Value == 3
+*/
+/*
+Test.assertEquals(missingNum([1, 2, 3, 4, 6, 7, 8, 9, 10]), 5)
+Test.assertEquals(missingNum([7, 2, 3, 6, 5, 9, 1, 4, 8]), 10)
+Test.assertEquals(missingNum([7, 2, 3, 9, 4, 5, 6, 8, 10]), 1)
+Test.assertEquals(missingNum([10, 5, 1, 2, 4, 6, 8, 3, 9]), 7)
+Test.assertEquals(missingNum([1, 7, 2, 4, 8, 10, 5, 6, 9]), 3)
+*/
