@@ -1,0 +1,39 @@
+//https://edabit.com/challenge/t6HFLEYD2e7ePxAu5
+function missingLetter(str) {
+	var str_l=str.length;
+	var flag=0;
+	for(var i=0;i<str_l-1;i++){
+		if(str.charCodeAt(i+1)-str.charCodeAt(i)>1){
+			flag=1;
+			break;
+			//return String.fromCharCode(str.charCodeAt(i)+1); //works
+		}
+	}
+	if(flag==1) {
+		var a=String.fromCharCode(str.charCodeAt(i)+1);;
+		return String.fromCharCode(a);
+	}
+	else return "No Missing Letter";
+}
+/*
+Test Passed: Value == 'c'
+Test Passed: Value == 'r'
+Test Passed: Value == 'w'
+Test Passed: Value == 'k'
+Test Passed: Value == 't'
+Test Passed: Value == 'f'
+Test Passed: Value == 's'
+Test Passed: Value == 'No Missing Letter'
+Test Passed: Value == 'No Missing Letter'
+*/
+/*
+Test.assertEquals(missingLetter("abdefg"), "c", "Example #1")
+Test.assertEquals(missingLetter("mnopqs"), "r", "Example #2")
+Test.assertEquals(missingLetter("tuvxyz"), "w", "Example #3")
+Test.assertEquals(missingLetter("jlm"), "k")
+Test.assertEquals(missingLetter("rsu"), "t")
+Test.assertEquals(missingLetter("eghij"), "f")
+Test.assertEquals(missingLetter("qrtuv"), "s")
+Test.assertEquals(missingLetter("ghijklmno"), "No Missing Letter", "Example #4")
+Test.assertEquals(missingLetter("xyz"), "No Missing Letter")
+*/
