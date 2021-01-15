@@ -1,0 +1,64 @@
+//https://edabit.com/challenge/byCrFXYokKujSebsD
+function chkvowel(s){
+	var flag=0;
+	switch(s){
+		case 'a': 
+		case 'e':
+		case 'i':
+		case 'o':
+		case 'A':
+		case 'E':
+		case 'I':
+		case 'O':
+		case 'U':
+		case 'u':flag=1;
+						 break;
+		default:flag=0;
+	}
+	return flag;
+}
+function vowelLinks(str) {
+	var arr=str.split(" ");
+	//a very large application
+	//0 1 2 3
+	//var chk=0;
+	for(var i=0;i<arr.length-1;i++){
+		var chk=0;
+		var s=arr[i];var s1=arr[i+1];
+		var f=chkvowel(s[s.length-1]);
+		var f1=chkvowel(s1[0]);
+		if(f&&f1){
+			chk=1;
+			break;
+		}
+	}
+	if(chk==1)return true;
+	else return false;
+	
+}
+/*
+Test Passed: Value == false
+Test Passed: Value == false
+Test Passed: Value == true
+Test Passed: Value == true
+Test Passed: Value == true
+Test Passed: Value == false
+Test Passed: Value == true
+Test Passed: Value == false
+Test Passed: Value == true
+Test Passed: Value == true
+Test Passed: Value == false
+*/
+/*
+Test.assertEquals(vowelLinks("an open fire"), false)
+Test.assertEquals(vowelLinks("the sudden applause"), false)
+Test.assertEquals(vowelLinks("the large appliances"), true)
+Test.assertEquals(vowelLinks("creative environment"), true)
+Test.assertEquals(vowelLinks("Creative Environment"), true)
+Test.assertEquals(vowelLinks("beneficial luggage"), false)
+Test.assertEquals(vowelLinks("the eagle swooped down low"), true)
+Test.assertEquals(vowelLinks("this is not a drill"), false)
+Test.assertEquals(vowelLinks("Patrice Evra"), true)
+Test.assertEquals(vowelLinks("please log on to edabit"), true)
+Test.assertEquals(vowelLinks("the quick brown fox was sad"), false)
+*/
