@@ -1,0 +1,68 @@
+//https://edabit.com/challenge/9CNJtMXaw2K5NwMLJ
+function convert(deg) {
+	//if(deg[deg.length-1]!="C"||deg[deg.length-1]!="F") return "Error";
+	var res;
+	if(deg[deg.length-1]=='C'){
+		res=0;
+		var r="";
+		for(var i=0;i<deg.length-2;i++)
+			r=r+deg[i];
+			var nr=parseInt(r);
+			res=res+((nr/5)*9)+32;
+			return Math.round(res).toString()+"°F";
+	}else if(deg[deg.length-1]=='F') {
+		res=0;
+		var r="";
+		for(var i=0;i<deg.length-2;i++)
+			r=r+deg[i];
+			var nr=parseInt(r);
+			res=res+((nr-32)*5)/9;
+			return Math.round(res).toString()+"°C";
+	}else 
+		return "Error";
+	//return Math.round(res);
+}
+/*
+Test Passed: Value == '95°F'
+Test Passed: Value == '64°F'
+Test Passed: Value == '-18°C'
+Test Passed: Value == '212°F'
+Test Passed: Value == '21°C'
+Test Passed: Value == '318°F'
+Test Passed: Value == '-40°F'
+Test Passed: Value == '-40°C'
+Test Passed: Value == '61°F'
+Test Passed: Value == '932°F'
+Test Passed: Value == 'Error'
+Test Passed: Value == '-7°C'
+Test Passed: Value == '185°F'
+Test Passed: Value == '32°F'
+Test Passed: Value == '969°C'
+Test Passed: Value == '-130°F'
+Test Passed: Value == '-9°C'
+Test Passed: Value == '356°F'
+Test Passed: Value == 'Error'
+Test Passed: Value == '38°C'
+*/
+/*
+Test.assertEquals(convert('35°C'), '95°F')
+Test.assertEquals(convert('18°C'), '64°F')
+Test.assertEquals(convert('0°F'), '-18°C')
+Test.assertEquals(convert('100°C'), '212°F')
+Test.assertEquals(convert('69°F'), '21°C')
+Test.assertEquals(convert('159°C'), '318°F')
+Test.assertEquals(convert('-40°C'), '-40°F')
+Test.assertEquals(convert('-40°F'), '-40°C')
+Test.assertEquals(convert('16°C'), '61°F')
+Test.assertEquals(convert('500°C'), '932°F')
+Test.assertEquals(convert('33'), 'Error')
+Test.assertEquals(convert('19°F'), '-7°C')
+Test.assertEquals(convert('85°C'), '185°F')
+Test.assertEquals(convert('0°C'), '32°F')
+Test.assertEquals(convert('1777°F'), '969°C')
+Test.assertEquals(convert('-90°C'), '-130°F')
+Test.assertEquals(convert('16°F'), '-9°C')
+Test.assertEquals(convert('180°C'), '356°F')
+Test.assertEquals(convert('7K'), 'Error')
+Test.assertEquals(convert('100°F'), '38°C')
+*/
