@@ -1,0 +1,31 @@
+//https://edabit.com/challenge/ccZBsRp6pX869gyqx
+function reverseString(str) {
+    return str.split("").reverse().join("");
+}
+function encrypt(word) {
+	var rev= reverseString(word);
+	var res="";
+	for(var i=0;i<rev.length;i++){
+		if(rev[i]=='a') res=res+'0';
+		else if(rev[i]=='e') res=res+'1';
+		else if(rev[i]=='i' ) res=res+'2';
+		else if(rev[i]=='o') res=res+'2';
+		else if(rev[i]=='u') res=res+ '3';
+		else res=res+rev[i];
+	}
+	return res+"aca";
+}
+/*
+Test Passed: Value == '0c0r0kaca'
+Test Passed: Value == 'k0r3baca'
+Test Passed: Value == '0n0n0baca'
+Test Passed: Value == '0c0pl0aca'
+Test Passed: Value == '2ll1haca'
+*/
+/*
+Test.assertEquals(encrypt("karaca"), "0c0r0kaca")
+Test.assertEquals(encrypt("burak"), "k0r3baca")
+Test.assertEquals(encrypt("banana"), "0n0n0baca")
+Test.assertEquals(encrypt("alpaca"), "0c0pl0aca")
+Test.assertEquals(encrypt("hello"), "2ll1haca")
+*/
