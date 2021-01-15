@@ -1,0 +1,81 @@
+//https://edabit.com/challenge/4qimb3QisL8wNbSCd
+function fretFreq(gStr, fret) {
+	var sfreq=[
+							{number:1,freq:329.63},
+							{number:2,freq:246.94},
+							{number:3,freq:196.00},
+							{number:4,freq:146.83},
+							{number:5,freq:110.00},
+							{number:6,freq:82.41}
+						];
+	for(var i=0;i<sfreq.length;i++){
+		if(sfreq[i].number == gStr){
+			var ans=(sfreq[i].freq * 2**(fret/12)).toFixed(2);
+			return parseFloat(ans);
+		}
+	}
+}
+/*
+    Test Passed: Value == 659.26
+    Test Passed: Value == 466.17
+    Test Passed: Value == 220.01
+    Test Passed: Value == 220
+    Test Passed: Value == 329.63
+    Test Passed: Value == 329.63
+    Test Passed: Value == 830.62
+    Test Passed: Value == 415.31
+    Test Passed: Value == 493.89
+    Test Passed: Value == 207.65
+    Test Passed: Value == 523.25
+    Test Passed: Value == 164.82
+    Test Passed: Value == 277.18
+    Test Passed: Value == 329.63
+    Test Passed: Value == 146.83
+    Test Passed: Value == 349.23
+    Test Passed: Value == 329.63
+    Test Passed: Value == 261.63
+    Test Passed: Value == 311.13
+    Test Passed: Value == 932.32
+    Test Passed: Value == 622.25
+    Test Passed: Value == 207.65
+    Test Passed: Value == 246.94
+    Test Passed: Value == 174.61
+    Test Passed: Value == 207.65
+    Test Passed: Value == 293.66
+    Test Passed: Value == 233.09
+    Test Passed: Value == 740
+    Test Passed: Value == 185
+    Test Passed: Value == 370
+*/
+/*
+Test.assertEquals(fretFreq(3, 21), 659.26)
+Test.assertEquals(fretFreq(3, 15), 466.17)
+Test.assertEquals(fretFreq(6, 17), 220.01)
+Test.assertEquals(fretFreq(5, 12), 220)
+Test.assertEquals(fretFreq(2, 5), 329.63)
+Test.assertEquals(fretFreq(3, 9), 329.63)
+Test.assertEquals(fretFreq(1, 16), 830.62)
+Test.assertEquals(fretFreq(1, 4), 415.31)
+Test.assertEquals(fretFreq(3, 16), 493.89)
+Test.assertEquals(fretFreq(4, 6), 207.65)
+Test.assertEquals(fretFreq(2, 13), 523.25)
+Test.assertEquals(fretFreq(6, 12), 164.82)
+Test.assertEquals(fretFreq(5, 16), 277.18)
+Test.assertEquals(fretFreq(5, 19), 329.63)
+Test.assertEquals(fretFreq(4, 0), 146.83)
+Test.assertEquals(fretFreq(2, 6), 349.23)
+Test.assertEquals(fretFreq(3, 9), 329.63)
+Test.assertEquals(fretFreq(3, 5), 261.63)
+Test.assertEquals(fretFreq(5, 18), 311.13)
+Test.assertEquals(fretFreq(2, 23), 932.32)
+Test.assertEquals(fretFreq(2, 16), 622.25)
+Test.assertEquals(fretFreq(4, 6), 207.65)
+Test.assertEquals(fretFreq(4, 9), 246.94)
+Test.assertEquals(fretFreq(5, 8), 174.61)
+Test.assertEquals(fretFreq(3, 1), 207.65)
+Test.assertEquals(fretFreq(5, 17), 293.66)
+Test.assertEquals(fretFreq(6, 18), 233.09)
+Test.assertEquals(fretFreq(3, 23), 740)
+Test.assertEquals(fretFreq(6, 14), 185)
+Test.assertEquals(fretFreq(1, 2), 370)
+*/
