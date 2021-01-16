@@ -1,0 +1,27 @@
+//https://edabit.com/challenge/4aaBNPnFMc3bzR7JR
+function objectToArray(obj) {
+	var res=[]
+	for(var i in obj){
+		var a=[];
+		a.push(i,obj[i]);
+		res.push(a);
+	}
+	return res;
+}
+/*
+Test Passed: Value == "[['D', 1], ['B', 2], ['C', 3]]"
+Test Passed: Value == "[['likes', 2], ['dislikes', 3], ['followers', 10]]"
+*/
+/*
+Test.assertSimilar(objectToArray({
+	D: 1, 
+  B: 2, 
+  C: 3
+}), [["D", 1], ["B", 2], ["C", 3]])
+
+Test.assertSimilar(objectToArray({
+	likes: 2, 
+  dislikes: 3, 
+  followers: 10
+}), [["likes", 2], ["dislikes", 3], ["followers", 10]])
+*/
