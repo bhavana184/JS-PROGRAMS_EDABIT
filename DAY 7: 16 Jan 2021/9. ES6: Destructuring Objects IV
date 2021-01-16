@@ -1,0 +1,38 @@
+//https://edabit.com/challenge/JQRbpfn6WpEksA2tu
+/*
+const str = `({ first = "John", last = "Doe", alias:nickname } = 
+{ first: "James", last: "Baker",alias:"JD" }).toString()`
+*/
+const str = `({ first = "John", last = "Doe", alias:nickname ="JD" } = 
+{ first: "James", last: "Baker"}).toString()`
+console.log(str);
+/*Assigning to new variable names
+const o = {p: 42, q: true};
+const {p: foo, q: bar} = o;
+console.log(foo); // 42
+console.log(bar); // true
+//Default values
+const {a = 10, b = 5} = {a: 3};
+console.log(a); // 3
+console.log(b); // 5
+*/
+/*
+({ first = "John", last = "Doe", alias:nickname ="JD" } = 
+{ first: "James", last: "Baker"}).toString()
+Test Passed: Value == 'valid'
+Test Passed: Value == 'James'
+Test Passed: Value == 'Baker'
+Test Passed: Value == 'JD'
+*/
+/*
+eval(str)
+
+const validString = (str) => {
+  return /\{.*alias.*\:.*nickname.*\=.*\"JD\".*\}/.test(str) ? "valid" : "not valid" 
+}
+  
+Test.assertEquals(validString(str), "valid", "You must rename alias to nickname and give it a default value of JD")
+Test.assertEquals(first, "James", "The variable first does not equal James")
+Test.assertEquals(last, "Baker", "The variable last does not equal Baker")
+Test.assertEquals(nickname, "JD", "The variable nickname does not equal JD")
+*/
