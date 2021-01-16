@@ -1,0 +1,23 @@
+//https://edabit.com/challenge/y4K6Mi7XfaauvoT3u
+function removeEntry(obj, itemName) {
+	var o={};
+	const res=Object.assign(o,obj);
+	var key = itemName;
+	delete res[key];
+	return res;
+//HELP:https://stackoverflow.com/questions/3455405/how-do-i-remove-a-key-from-a-javascript-object
+}
+/*
+Test Passed: Value == false
+Test Passed: Value == '{ piano: 0.8000169936767165 }'
+Test Passed: Value == '{ piano: 0.8000169936767165, skate: 50 }'
+*/
+/*
+const random = Math.random()
+const obj = {piano: random, tv: 100}
+const obj2 = {piano: random, tv: 100, skate: 50}
+const res = Object.is(removeEntry(obj, "tv"), obj)
+Test.assertEquals(res, false)
+Test.assertSimilar(removeEntry(obj, "tv"), {piano: random})
+Test.assertSimilar(removeEntry(obj2, "tv"), {piano: random, skate:50})
+*/
