@@ -1,0 +1,22 @@
+//https://edabit.com/challenge/9KEKJG5PZTFmG3Zau
+function objectify (key, value) {
+  return {
+    [key]: value
+  }
+}
+function addName(obj, name, value) {
+	var o=new Object();
+	o= objectify(name,value);
+	const returnedTarget = Object.assign(obj, o);
+	return returnedTarget;
+}
+/*
+Test Passed: Value == '{ Brutus: 300 }'
+Test Passed: Value == '{ piano: 500, Brutus: 400 }'
+Test Passed: Value == '{ piano: 500, stereo: 300, Caligula: 440 }'
+*/
+/*
+Test.assertSimilar(addName({}, "Brutus", 300), {Brutus: 300})
+Test.assertSimilar(addName({piano: 500}, "Brutus", 400), {piano: 500, Brutus: 400})
+Test.assertSimilar(addName({piano: 500, stereo: 300}, "Caligula", 440), {piano: 500,  stereo: 300, Caligula: 440})
+*/
