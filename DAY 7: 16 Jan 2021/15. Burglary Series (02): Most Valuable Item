@@ -1,0 +1,39 @@
+//https://edabit.com/challenge/yMEs8bXPyZenPEYLM
+function mostExpensiveItem(obj) {
+	for(var i in obj){
+		var e="";
+		var max=0;
+		if(obj[i]>max){
+			max=obj[i];
+			e=e+i;
+		}
+	}
+	return e;
+	//Object.entries(obj).sort((a,b) => b[1]-a[1]);
+	// Object.keys(obj);//return keys
+	/*for(var i in obj){
+		return i;
+	}*/
+	//Object.keys(obj)[0];//works on coding blocks ide
+}
+/*
+Test Passed: Value == 'stereo'
+Test Passed: Value == "'skate'"
+FAILED: Expected: 'tv', instead got: 'skate'
+*/
+/*
+Test.assertEquals(mostExpensiveItem({
+  tv: 30,
+  skate: 20,
+  stereo: 50,
+}), "stereo")
+
+Test.assertSimilar(mostExpensiveItem({
+  skate: 20,
+}), "skate")
+
+Test.assertEquals(mostExpensiveItem({
+  tv: 30,
+  skate: 20,
+}), "tv")
+*/
