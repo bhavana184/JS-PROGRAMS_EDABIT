@@ -1,0 +1,56 @@
+//https://edabit.com/challenge/Hgb38yhWGwJCMHbRQ
+/*
+class Rectangle {
+  constructor(sideA, sideB) {
+    this.sideA = sideA
+    this.sideB = sideB
+  }
+  getArea(){return this.sideA*this.sideB}
+  getPerimeter(){return (this.sideA + this.sideB) *2}
+}
+*/
+class Circle {
+	// put your code here
+	constructor(radius) {
+    this.radius=radius
+  }
+  getArea(){return Math.PI*this.radius*this.radius}
+  getPerimeter(){return (2*Math.PI *this.radius)}
+}
+
+
+// unquote and use run to test these cases:
+let q = new Circle(4.44);
+console.log(q.getArea());
+console.log(q.getPerimeter());
+
+
+/*
+61.93210093580775
+27.897342763877365
+Test Passed: Value == 1256.63706
+Test Passed: Value == 125.66371
+Test Passed: Value == 12.56637
+Test Passed: Value == 12.56637
+Test Passed: Value == 60.82123
+Test Passed: Value == 27.64602
+Test Passed: Value == 1661.90251
+Test Passed: Value == 144.51326
+*/
+/*
+function round(number) {
+  var factor = Math.pow(10, 5);
+  return Math.round(number * factor) / factor;
+}
+let circo = new Circle(20);
+Test.assertEquals(round(circo.getArea()), 1256.63706);
+Test.assertEquals(round(circo.getPerimeter()), 125.66371);
+let circo1 = new Circle(2);
+Test.assertEquals(round(circo1.getArea()), 12.56637);
+Test.assertEquals(round(circo1.getPerimeter()), 12.56637);
+let circo2 = new Circle(4.4);
+Test.assertEquals(round(circo2.getArea()), 60.82123);
+Test.assertEquals(round(circo2.getPerimeter()),  27.64602);
+let randomInt = round(Math.floor(Math.random() * Math.floor(200)));
+//scroll down for spoilers that are hard to use
+*/
