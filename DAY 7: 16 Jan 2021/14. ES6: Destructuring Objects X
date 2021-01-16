@@ -1,0 +1,74 @@
+//https://edabit.com/challenge/sWzEwh5cXaAY7yEoo
+let names = []
+let users = [
+  { name: "John", email: "john@example.com" },
+  { name: "Jason", email: "jason@example.com" },
+  { name: "Jeremy", email: "jeremy@example.com" },
+  { name: "Jacob", email: "jacob@example.com" }
+] 
+
+/*const str = `
+	for(var i in users) {
+			names.push(users[i].name)
+	}`
+	//test failed: valid
+	names array test case passed
+*/
+const str = `
+	for(const {name: n, email: e} of users) {
+			names.push(n)
+	}`
+console.log(str)
+
+/*
+for(const {name: n, email: e} of users) {
+   names.push(n)
+ }
+Test Passed: Value == 'valid'
+Test Passed: Value == "['John', 'Jason', 'Jeremy', 'Jacob']"
+*/
+/*
+eval(str)
+
+function validation() {
+	return /for.*\{.*[a-zA-Z]+.*\}/.test(str) ? "valid" : "not valid" 
+}
+
+Test.assertEquals(validation(), "valid", "You must use object destructuring inside the for..of parameters ")
+Test.assertSimilar(names, ['John', 'Jason', 'Jeremy', 'Jacob'])
+*/
+
+/*HELP: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#object_destructuring
+For of iteration and destructuring
+const people = [
+  {
+    name: 'Mike Smith',
+    family: {
+      mother: 'Jane Smith',
+      father: 'Harry Smith',
+      sister: 'Samantha Smith'
+    },
+    age: 35
+  },
+  {
+    name: 'Tom Jones',
+    family: {
+      mother: 'Norah Jones',
+      father: 'Richard Jones',
+      brother: 'Howard Jones'
+    },
+    age: 25
+  }
+];
+
+for (const {name: n, family: {father: f}} of people) {
+  console.log('Name: ' + n + ', Father: ' + f);
+}
+
+// "Name: Mike Smith, Father: Harry Smith"
+// "Name: Tom Jones, Father: Richard Jones"
+*/
+
+
+
+
