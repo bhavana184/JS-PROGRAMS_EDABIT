@@ -1,0 +1,34 @@
+//https://edabit.com/challenge/pLNavsePxJ87t9Nak
+function calculateLosses(obj) {
+	var sum=0;
+	for(var i in obj){
+		sum=sum+obj[i];
+	}
+	if(sum==0)return 'Lucky you!';
+	return sum
+}
+/*
+Test Passed: Value == 100
+Test Passed: Value == 50001
+Test Passed: Value == 3500
+Test Passed: Value == 'Lucky you!'
+*/
+/*
+Test.assertEquals(calculateLosses({
+  tv: 30,
+  skate: 20,
+  stereo: 50,
+}), 100)
+
+Test.assertEquals(calculateLosses({
+  ring: 30000,
+  painting: 20000,
+  bust: 1,
+}), 50001)
+
+Test.assertEquals(calculateLosses({
+  chair: 3500,
+}), 3500)
+
+Test.assertEquals(calculateLosses({}), "Lucky you!")
+*/
