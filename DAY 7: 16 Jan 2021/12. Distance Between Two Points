@@ -1,0 +1,22 @@
+//https://edabit.com/challenge/caeSeQ3K53GMQKenX
+function getDistance(a, b) {
+	return parseFloat(Math.sqrt((b.x-a.x)**2 +(b.y-a.y)**2).toFixed(3));
+}
+/*
+Test Passed: Value == 6.325
+Test Passed: Value == 1.414
+Test Passed: Value == 21.095
+Test Passed: Value == 5.099
+Test Passed: Value == 15.556
+Test Passed: Value == 0
+Test Passed: Value == 35856.153
+*/
+/*
+Test.assertEquals(getDistance({x: -2, y: 1}, {x: 4, y: 3}), 6.325, "Example #1")
+Test.assertEquals(getDistance({x: 0, y: 0}, {x: 1, y: 1}), 1.414, "Example #2")
+Test.assertEquals(getDistance({x: 10, y: -5}, {x: 8, y: 16}), 21.095, "Example #3")
+Test.assertEquals(getDistance({x: 4, y: 3}, {x: 3, y: -2}), 5.099)
+Test.assertEquals(getDistance({x: -1, y: -1}, {x: 10, y: 10}), 15.556)
+Test.assertEquals(getDistance({x: 100, y: 100}, {x: 100, y: 100}), 0)
+Test.assertEquals(getDistance({x: 14239, y: -11222}, {x: -12301, y: 12888}), 35856.153)
+*/
