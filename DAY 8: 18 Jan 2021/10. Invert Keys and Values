@@ -1,0 +1,26 @@
+//https://edabit.com/challenge/YTECpnCCeJsYqYvfF
+
+
+function invert(o) {
+
+var res={}
+
+  for(var i in o){
+
+    res[o[i]]=i;
+
+  }
+
+  return res;
+
+}
+/*
+    Test Passed: Value deep equals { '1': 'a', '2': 'b', '3': 'c' }
+    Test Passed: Value deep equals { q: 'z', f: 'w' }
+    Test Passed: Value deep equals { koala: 'zebra', camel: 'horse' }
+*/
+/*
+Test.assertDeepEquals(invert({"a": 1, "b": 2, "c": 3}), {1: "a", 2: "b", 3: "c"})
+Test.assertDeepEquals(invert({"z": "q", "w": "f"}), {"q": "z", "f": "w"})
+Test.assertDeepEquals(invert({"zebra": "koala", "horse": "camel"}), {"koala": "zebra", "camel": "horse"})
+*/
