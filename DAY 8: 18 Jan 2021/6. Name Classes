@@ -1,0 +1,59 @@
+//https://edabit.com/challenge/qNMtrtizgssAQqP2b
+
+
+class Name {
+
+  constructor(fname,lname){
+
+    this.fname=fname.charAt(0).toUpperCase()+fname.slice(1).toLowerCase();
+
+    this.lname=lname.charAt(0).toUpperCase()+lname.slice(1).toLowerCase();
+
+    this.fullname =  this.fname + " " + this.lname;
+
+    this.initials =  this.fname.charAt(0).toUpperCase()+"."+
+
+                    this.lname.charAt(0).toUpperCase();     
+
+  }
+
+}
+
+var a1 = new Name("john", "SMITH")
+
+console.log(a1.fname )
+
+console.log(a1.lname) 
+
+console.log(a1.fullname)
+
+console.log(a1.initials)
+
+/*
+
+    John
+    Smith
+    John Smith
+    J.S
+    Test Passed: Value == 'John'
+    Test Passed: Value == 'Smith'
+    Test Passed: Value == 'John Smith'
+    Test Passed: Value == 'J.S'
+    Test Passed: Value == 'Sarah'
+    Test Passed: Value == 'Frollie'
+    Test Passed: Value == 'Sarah Frollie'
+    Test Passed: Value == 'S.F'
+*/
+/*
+a1 = new Name("john", "SMITH")
+Test.assertEquals(a1.fname, "John")
+Test.assertEquals(a1.lname, "Smith")
+Test.assertEquals(a1.fullname, "John Smith")
+Test.assertEquals(a1.initials, "J.S")
+
+a2 = new Name("sARah", "fRolliE")
+Test.assertEquals(a2.fname, "Sarah")
+Test.assertEquals(a2.lname, "Frollie")
+Test.assertEquals(a2.fullname, "Sarah Frollie")
+Test.assertEquals(a2.initials, "S.F")
+*/
