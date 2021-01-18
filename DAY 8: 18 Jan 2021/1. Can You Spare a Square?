@@ -1,0 +1,23 @@
+//https://edabit.com/challenge/xhrEw5w9N45TfsgiY
+function tpChecker(home) {
+	var d=Math.floor((home.tp * 500)/(home.people*57));
+	if(d<=14)
+		return "Your TP will only last "+d+" days, buy more!";
+	return "Your TP will last "+d+" days, no need to panic!"
+}
+/*
+Test Passed: Value == 'Your TP will only last 2 days, buy more!'
+Test Passed: Value == 'Your TP will last 17 days, no need to panic!'
+Test Passed: Value == 'Your TP will last 58 days, no need to panic!'
+Test Passed: Value == 'Your TP will last 26 days, no need to panic!'
+Test Passed: Value == 'Your TP will only last 11 days, buy more!'
+Test Passed: Value == 'Your TP will only last 8 days, buy more!'
+*/
+/*
+Test.assertEquals(tpChecker({ people: 4, tp: 1 }), "Your TP will only last 2 days, buy more!")
+Test.assertEquals(tpChecker({ people: 2, tp: 4 }), "Your TP will last 17 days, no need to panic!")
+Test.assertEquals(tpChecker({ people: 3, tp: 20 }), "Your TP will last 58 days, no need to panic!")
+Test.assertEquals(tpChecker({ people: 4, tp: 12 }), "Your TP will last 26 days, no need to panic!")
+Test.assertEquals(tpChecker({ people: 6, tp: 8 }), "Your TP will only last 11 days, buy more!")
+Test.assertEquals(tpChecker({ people: 1, tp: 1 }), "Your TP will only last 8 days, buy more!")
+*/
