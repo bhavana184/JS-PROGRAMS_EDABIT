@@ -1,0 +1,36 @@
+//https://edabit.com/challenge/5Yt2CrYdrJvoJFHRt
+function mapping(letters) {
+	var o={};
+	for( var i=0;i<letters.length;i++){
+		var u =letters[i].toUpperCase();
+		o[ letters[i] ] = u;
+	}
+	return o;
+}
+/*
+Test Passed: Value == "{ a: 'A', b: 'B', c: 'C' }"
+Test Passed: Value == "{ p: 'P', s: 'S', t: 'T' }"
+Test Passed: Value == "{ a: 'A', v: 'V', y: 'Y', z: 'Z' }"
+*/
+/*
+Test.assertSimilar(mapping(["a", "b", "c"]), { a: "A", b: "B", c: "C" })
+Test.assertSimilar(mapping(["p", "s", "t"]), { p: "P", s: "S", t: "T" })
+Test.assertSimilar(mapping(["a", "v", "y", "z"]), { a: "A", v: "V", y: "Y", z: "Z" })
+*/
+//HELP:https://stackoverflow.com/questions/14234646/adding-elements-to-object/14234701
+/*
+With that row
+
+var element = {};
+
+you define element to be a plain object. The native JavaScript object has no push() method. To add new items to a plain object use this syntax:
+
+element[ yourKey ] = yourValue;
+
+On the other hand you could define element as an array using
+
+var element = [];
+
+Then you can add elements using push().
+
+*/
