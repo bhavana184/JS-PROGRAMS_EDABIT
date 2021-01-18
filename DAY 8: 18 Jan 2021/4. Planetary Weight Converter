@@ -1,0 +1,40 @@
+//https://edabit.com/challenge/CaWc84kuPBzCMEcR3
+function gravforce(planet){
+	if(planet=="Mercury") return 3.7
+	else if(planet=="Venus") return 8.87
+	else if(planet=="Earth") return 9.81
+	else if(planet=="Mars") return 3.711
+	else if(planet=="Jupiter") return 24.79
+	else if(planet=="Saturn") return 10.44
+	else if(planet=="Uranus") return 8.69
+	else if(planet=="Neptune") return 11.15
+}
+function spaceWeights(planetA, weight, planetB) {
+return parseFloat(((weight/gravforce(planetA))*gravforce(planetB)).toFixed(2));
+}
+/*
+Test Passed: Value == 0.38
+Test Passed: Value == 2.53
+Test Passed: Value == 1.14
+Test Passed: Value == 14.93
+Test Passed: Value == 209.61
+Test Passed: Value == 12.01
+Test Passed: Value == 119.64
+Test Passed: Value == 1250.23
+Test Passed: Value == 4.93
+Test Passed: Value == 471.54
+Test Passed: Value == 1.24
+*/
+/*
+Test.assertEquals(spaceWeights("Earth", 1, "Mars"), 0.38, "Example #1")
+Test.assertEquals(spaceWeights("Earth", 1, "Jupiter"), 2.53, "Example #2")
+Test.assertEquals(spaceWeights("Earth", 1, "Neptune"), 1.14, "Example #3")
+Test.assertEquals(spaceWeights("Jupiter", 100, "Mercury"), 14.93)
+Test.assertEquals(spaceWeights("Venus", 75, "Jupiter"), 209.61)
+Test.assertEquals(spaceWeights("Uranus", 10, "Saturn"), 12.01)
+Test.assertEquals(spaceWeights("Mars", 120, "Mercury"), 119.64)
+Test.assertEquals(spaceWeights("Neptune", 1421, "Earth"), 1250.23)
+Test.assertEquals(spaceWeights("Jupiter", 33, "Mercury"), 4.93)
+Test.assertEquals(spaceWeights("Saturn", 555, "Venus"), 471.54)
+Test.assertEquals(spaceWeights("Jupiter", 3.141592, "Earth"), 1.24)
+*/
