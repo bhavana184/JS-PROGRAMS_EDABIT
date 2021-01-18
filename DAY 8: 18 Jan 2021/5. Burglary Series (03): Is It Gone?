@@ -15,6 +15,7 @@ function findIt(obj, name) {
 	}
 	return name.charAt(0).toUpperCase() + name.slice(1)+" is here!";
 }
+//HELP:https://flaviocopes.com/how-to-uppercase-first-letter-javascript/
 /*
 Test Passed: Value == 'Rambo is here!'
 Test Passed: Value == 'Heman is here!'
