@@ -10,6 +10,18 @@ function expensiveOrders(orders, cost) {
 	}
 	return res;
 }
+OR
+function expensiveOrders(orders, cost) {
+	var o={};
+	const res=Object.assign(o,orders);
+	for(var i in res){
+		if(res[i]<cost){
+			var key=i;
+			delete res[key];
+		}
+	}
+	return res;
+}
 /*
 Test Passed: Value == '{"a":3000,"c":1050}'
 Test Passed: Value == '{"Gucci Fur":24600}'
