@@ -31,7 +31,7 @@ function mostExpensiveItem(obj) {
 /*
 Test Passed: Value == 'stereo'
 Test Passed: Value == "'skate'"
-FAILED: Expected: 'tv', instead got: 'skate'
+Test Passed: Value == 'tv'
 */
 /*
 Test.assertEquals(mostExpensiveItem({
