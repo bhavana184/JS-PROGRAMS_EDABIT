@@ -1,0 +1,26 @@
+//https://edabit.com/challenge/EvPxDapyKECM9CrLR
+function expensiveOrders(orders, cost) {
+	var o={};
+	const res=Object.assign(o,orders);
+	for(var i in orders){
+		if(orders[i]<cost){
+			var key=i;
+			delete res[key];
+		}
+	}
+	return res;
+}
+/*
+Test Passed: Value == '{"a":3000,"c":1050}'
+Test Passed: Value == '{"Gucci Fur":24600}'
+Test Passed: Value == '{}'
+Test Passed: Value == '{"Kyoto Ticket":10,"Museum Exhibit":30,"Kimono":3000}'
+Test Passed: Value == '{"Hand cuffs":60,"RF Device":150}'
+*/
+/*
+Test.assertEquals(JSON.stringify(expensiveOrders({"a": 3000, "b": 200, "c": 1050}, 1000)), '{"a":3000,"c":1050}')
+Test.assertEquals(JSON.stringify(expensiveOrders({"Gucci Fur": 24600, "Teak Dining Table": 3200, "Louis Vutton Bag": 5550, "Dolce Gabana Heels": 4000}, 20000)), '{"Gucci Fur":24600}')
+Test.assertEquals(JSON.stringify(expensiveOrders({"Deluxe Burger": 35, "Icecream Shake": 4, "Fries": 5}, 40)), "{}")
+Test.assertEquals(JSON.stringify(expensiveOrders({"Kyoto Ticket": 10, "Museum Exhibit": 30, "Kimono": 3000}, 5)), '{"Kyoto Ticket":10,"Museum Exhibit":30,"Kimono":3000}')
+Test.assertEquals(JSON.stringify(expensiveOrders({"Travis Scott burger": 6, "Bowl of Beans": 3, "Hand cuffs": 60, "RF Device": 150}, 42)), '{"Hand cuffs":60,"RF Device":150}')
+*/
