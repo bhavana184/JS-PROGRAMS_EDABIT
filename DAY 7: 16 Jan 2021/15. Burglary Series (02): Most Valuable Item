@@ -1,5 +1,17 @@
 //https://edabit.com/challenge/yMEs8bXPyZenPEYLM
 function mostExpensiveItem(obj) {
+	var res="";
+	var max=0;
+	for(var i in obj){
+		if(obj[i]>max){
+			max=obj[i];
+			res=i;
+		}
+	}
+	return res;
+}
+
+/*function mostExpensiveItem(obj) {
 	for(var i in obj){
 		var e="";
 		var max=0;
@@ -15,7 +27,7 @@ function mostExpensiveItem(obj) {
 		return i;
 	}*/
 	//Object.keys(obj)[0];//works on coding blocks ide
-}
+}*/
 /*
 Test Passed: Value == 'stereo'
 Test Passed: Value == "'skate'"
