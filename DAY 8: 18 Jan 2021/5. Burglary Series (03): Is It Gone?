@@ -1,0 +1,51 @@
+//https://edabit.com/challenge/FBj5P49wwFzj2Jnfr
+function findIt(obj, name) {
+	var present=1;
+	var i;
+	for(i in obj ){
+	if(i==name) {
+			present=0;
+			break;
+		} 
+	}
+	if(present==0){
+			var name1 = name;
+			var nameCapitalized = name1.charAt(0).toUpperCase() + name1.slice(1);
+			return nameCapitalized+" is gone...";
+	}
+	return name.charAt(0).toUpperCase() + name.slice(1)+" is here!";
+}
+/*
+Test Passed: Value == 'Rambo is here!'
+Test Passed: Value == 'Heman is here!'
+Test Passed: Value == 'Rocky is here!'
+Test Passed: Value == 'Spiderman is here!'
+Test Passed: Value == 'Julius is gone...'
+Test Passed: Value == 'Batman is gone...'
+*/
+/*
+Test.assertEquals(findIt({}, "rambo"),"Rambo is here!")
+Test.assertEquals(findIt({}, "heman"),"Heman is here!")
+
+Test.assertEquals(findIt({
+  tv: 30,
+  stereo: 50,
+}, "rocky"),"Rocky is here!")
+
+Test.assertEquals(findIt({
+  tv: 30,
+  stereo: 50,
+}, "spiderman"),"Spiderman is here!")
+
+Test.assertEquals(findIt({
+  tv: 30,
+  stereo: 50,
+	julius: 100,											 
+}, "julius"),"Julius is gone...")
+
+Test.assertEquals(findIt({
+  tv: 30,
+  stereo: 50,
+	batman: 200,											 
+}, "batman"),"Batman is gone...")
+*/
