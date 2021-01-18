@@ -1,0 +1,194 @@
+//https://edabit.com/challenge/zvq3A6AJDWmnnK7Ry
+function isEqual(objOne, objTwo) {
+
+  return JSON.stringify(objOne)===JSON.stringify(objTwo)
+
+  //Convert a JavaScript object into a string with JSON.stringify().
+
+}
+
+/*function isEqual(objOne, objTwo) {
+  var chk=1//equal=true;
+  //if(Object.keys(objOne).length == Object.keys(objTwo).length){
+  for(var i in objOne){
+    if(objOne[i]!==objTwo[i]){//!== : not equal value or not equal type
+      chk=0;
+      break;
+    }
+  }
+  //}
+  if(chk==0)return false;
+  return true;
+}
+last test case failed
+*/
+/*
+    Tests
+    Test #1
+    Test Passed: Value == false
+    Completed in: 1
+    Test #2
+    Test Passed: Value == true
+    Test #3
+    Test Passed: Value == false
+    Test #4
+    Test Passed: Value == false
+    Completed in: 1
+    Test #5
+    Test Passed: Value == false
+    Test #6
+    Test Passed: Value == true
+    Completed in: 7
+
+*/
+/*
+describe("Tests", function () {
+  it("Test #1", function () {
+    const objOne = {
+      name: "Benny",
+      phone: "3325558745",
+      email: "benny@edabit.com"
+    }
+
+    const objTwo = {
+      name: "Jason",
+      phone: "9853759720",
+      email: "jason@edabit.com"
+    }
+
+    Test.assertEquals(isEqual(objOne, objTwo), false);
+  });
+
+  it("Test #2", function () {
+    const objOne = {
+      name: "Jason",
+      phone: "9853759720",
+      email: "jason@edabit.com"
+    }
+
+    const objTwo = {
+      name: "Jason",
+      phone: "9853759720",
+      email: "jason@edabit.com"
+    }
+
+    Test.assertEquals(isEqual(objOne, objTwo), true);
+  });
+
+  it("Test #3", function () {
+    const objOne = {
+      names: ["Tom", "Joe", "David"],
+      fruitIds: {
+        orangeId: 77634,
+        appleId: 74323,
+        bananaId: 09487
+      }
+    }
+
+    const objTwo = {
+      names: ["Tom", "Joe", "Steve"],
+      fruitIds: {
+        orangeId: 77634,
+        appleId: 74323,
+        bananaId: 65970
+      }
+    }
+
+    Test.assertEquals(isEqual(objOne, objTwo), false);
+  });
+
+  it("Test #4", function () {
+    const objOne = {
+      foo: {
+        bar: {
+          baz: true
+        },
+        baz: {
+          arr: [1, 2, 3]
+        }
+      }
+    }
+
+    const objTwo = {
+      foo: {
+        bar: {
+          baz: true
+        },
+        baz: {
+          arr: [3, 2, 1]
+        }
+      }
+    }
+
+    Test.assertEquals(isEqual(objOne, objTwo), false, "The foo.bar.baz array has changed.");
+  });
+
+  it("Test #5", function () {
+    const objOne = {
+      foo: {
+        bar: {
+          baz: "edabit.com"
+        },
+        baz: {
+          userIds: {
+            jason: 76397,
+            steve: 73073,
+            joe: 21076
+          }
+        }
+      }
+    }
+
+    const objTwo = {
+      foo: {
+        baz: {
+          userIds: {
+            jason: 76397,
+            steve: 73073,
+            joe: 21076
+            }
+        },
+        bar: {
+          baz: "edabit.com"
+          }
+      }
+    }
+
+    Test.assertEquals(isEqual(objOne, objTwo), false, "The order of the object keys has changed.");
+  });
+
+  it("Test #6", function () {
+    const objOne = {
+      foo: {
+        bar: {
+          baz: "edabit.com"
+        },
+        baz: {
+          userIds: {
+            jason: 76397,
+            steve: 73073,
+            joe: 21076
+          }
+        }
+      }
+    }
+
+    const objTwo = {
+      foo: {
+        bar: {
+          baz: "edabit.com"
+          },
+        baz: {
+          userIds: {
+            jason: 76397,
+            steve: 73073,
+            joe: 21076
+            }
+        }
+      }
+    }
+
+    Test.assertEquals(isEqual(objOne, objTwo), true);
+  });
+});
+*/
