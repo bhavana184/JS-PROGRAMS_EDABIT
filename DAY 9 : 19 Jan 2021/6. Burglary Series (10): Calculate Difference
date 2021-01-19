@@ -1,0 +1,29 @@
+//https://edabit.com/challenge/8s2jy9hR2TAeQinKD
+
+
+function calculateDifference(obj, limit) {
+
+  var sum=0;
+
+  for(var i in obj)
+
+      sum=sum+obj[i];
+
+  return Math.abs(sum-limit)
+
+}
+/*
+    Test Passed: Value == 1
+    Test Passed: Value == 21
+    Test Passed: Value == 35
+*/
+
+/*
+const random = Test.randomNumber()
+const obj = { skate: 20000, painting: 30000, shoes: 1 }
+const obj2 = { "baseball bat": 31}
+const obj3 = {stereo: 110, pillow: random}
+Test.assertEquals(calculateDifference(obj, 50000),1)
+Test.assertEquals(calculateDifference(obj2, 10),21)
+Test.assertEquals(calculateDifference(obj3, 100), obj3.stereo + obj3.pillow - 100)
+*/
