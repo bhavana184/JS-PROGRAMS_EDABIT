@@ -1,0 +1,72 @@
+//https://edabit.com/challenge/xrsiqZKrMoT2skt9i
+
+
+function signAll(obj, name) {
+
+  for(var i in obj){
+
+    obj[i]['signature'] = name;
+
+    obj['signature'] = name;
+
+  }
+
+  return obj;
+
+}
+/*
+    Test Passed: Value == '{\n' +
+      "  kitchen: { painting: 100, piano: 1000, signature: 'ttq7j' },\n" +
+      "  signature: 'ttq7j'\n" +
+      '}'
+    Test Passed: Value == '{\n' +
+      "  bathroom: { stereo: 220, signature: 'ttq7j' },\n" +
+      "  cellar: { mirror: 10, broom: 90, signature: 'ttq7j' },\n" +
+      "  signature: 'ttq7j'\n" +
+      '}'
+
+*/
+/*
+const name = Test.randomToken()
+const obj = {
+    kitchen: {
+      painting: 100,
+      piano: 1000,
+      signature: "",
+    },
+    signature: "",
+  };
+const obj2 = {
+    bathroom: {
+      stereo: 220,
+      signature: "",
+    },
+	  cellar: {
+      mirror: 10,
+      broom: 90,
+      signature: "",
+    },
+    signature: "",
+  };
+
+Test.assertSimilar(signAll(obj, name), {
+    kitchen: {
+      painting: 100,
+      piano: 1000,
+      signature: name,
+    },
+    signature: name,
+  })
+Test.assertSimilar(signAll(obj2, name), {
+    bathroom: {
+      stereo: 220,
+      signature: name,
+    },
+	  cellar: {
+      mirror: 10,
+      broom: 90,
+      signature: name,
+    },
+    signature: name,
+  })
+*/
