@@ -1,0 +1,42 @@
+//https://edabit.com/challenge/Mwryyhy2e8Gk9yrCh
+
+
+function countNumberOfOccurrences(obj) {
+
+  var res={};
+
+  for(var i in obj){
+
+    if(res[obj[i]]){
+
+      res[obj[i]]++
+
+    }else{
+
+      res[obj[i]]=1
+
+    }
+
+  }
+
+  return res
+
+}
+
+//HELP:https://stackoverflow.com/questions/29957390/counting-occurrences-of-object-values
+/*
+    Test Passed: Value == '{ moron: 2, scumbag: 1, idiot: 2 }'
+    Test Passed: Value == '{ pig: 3 }'
+    Test Passed: Value == '{ sleazball: 1, pervert: 3 }'
+    Test Passed: Value == 3
+*/
+/*
+const obj = { a: "moron", b: "scumbag", c: "moron", d: "idiot", e: "idiot" }
+const obj2 = { a: "pig", b: "pig", c: "pig" }
+const obj3 = { a: "sleazball", b: "pervert", c: "pervert", d: "pervert" }
+
+Test.assertSimilar(countNumberOfOccurrences(obj), { moron: 2, scumbag: 1, idiot:2 } )
+Test.assertSimilar(countNumberOfOccurrences(obj2), { pig: 3 })
+Test.assertSimilar(countNumberOfOccurrences(obj3), { sleazball: 1, pervert: 3 })
+Test.assertEquals(countNumberOfOccurrences(obj3).pervert, 3)
+*/
