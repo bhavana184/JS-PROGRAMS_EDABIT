@@ -1,0 +1,41 @@
+//https://edabit.com/challenge/Cve45maGdj5XtQXgo
+
+
+function filterValues(obj) {
+
+  var res={};
+
+  for(var i in obj){
+
+    if(obj[i]>=5000){
+
+      res[i]=obj[i]
+
+    }
+
+  }
+
+  return res
+
+}
+/*
+    Test Passed: Value == false
+    Test Passed: Value == '{ skate: 5000 }'
+    Test Passed: Value == '{}'
+    Test Passed: Value == '{}'
+    Test Passed: Value == '{ guitar: 5000, fork: 5001 }'
+
+*/
+/*
+const random = Math.random() * 10000, random2 = Test.randomNumber() * 100
+const obj = {piano: 4999, skate: 5000, stereo: random, "rubber duck": random2}
+let obj2 = Object.entries(obj).filter(item => item[1] >= 5000)
+obj2 = Object.fromEntries(obj2);
+const check = Object.is(filterValues(obj), obj)
+
+Test.assertEquals(check, false)
+Test.assertSimilar(filterValues(obj), obj2)
+Test.assertSimilar(filterValues({}), {})
+Test.assertSimilar(filterValues({piano: 300}), {})
+Test.assertSimilar(filterValues({tv: 4999, guitar:5000, fork: 5001 }), {guitar:5000, fork: 5001 })
+*/
