@@ -1,0 +1,33 @@
+//https://edabit.com/challenge/cEbhy9eWeNudEuxut
+
+
+function makeCopy(obj) {
+
+  //var o=new Object();
+
+  var objcopy=Object.assign({},obj);
+
+  return objcopy;
+
+}
+/8
+    Test Passed: Value != { piano: 100 }
+    Test Passed: Value == '{ piano: 100 }'
+    Test Passed: Value != { stereo: 200 }
+    Test Passed: Value == '{ stereo: 200 }'
+    Test Passed: Value != { tv: 0.03868061787659194 }
+    Test Passed: Value == '{ tv: 0.03868061787659194 }'
+
+*/
+/*
+const obj = {piano: 100}
+const obj2 = {stereo: 200}
+const obj3 = {tv: Math.random()}
+
+Test.assertNotEquals(makeCopy(obj), obj, "Return a copy of the obj, not the obj itself")
+Test.assertSimilar(makeCopy(obj), obj)
+Test.assertNotEquals(makeCopy(obj2), obj2, "Return a copy of the obj, not the obj itself")
+Test.assertSimilar(makeCopy(obj2), obj2)
+Test.assertNotEquals(makeCopy(obj3), obj3)
+Test.assertSimilar(makeCopy(obj3), obj3)
+*/
