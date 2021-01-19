@@ -1,0 +1,75 @@
+//https://edabit.com/challenge/H5rAoCQBjyB4woTPY
+
+
+const obj = {
+
+  kitchen: {
+
+    knives: 500,
+
+    stereo: 200,
+
+    signature: ""
+
+  },
+
+signature: "Rocky Balboa"
+
+}
+
+
+function signAgain(obj) {
+
+  // write your code here
+
+  // don't use a return statement
+
+
+  obj.kitchen.signature=obj.signature
+
+  Object.freeze(obj)
+
+  Object.freeze(obj.kitchen)
+
+  // DON'T CHANGE OR REMOVE THE LINES BELOW
+
+  obj.signature = "Terminator"
+
+  obj.extraProperty = "not possible"
+
+  obj.kitchen.piano = 1000
+
+  obj.kitchen.signature = "Rocky Balboa"
+
+  return obj
+
+}
+
+/*    Test Passed: Value == '{\n' +
+      "  kitchen: { knives: 500, stereo: 12, signature: 'Rocky Balboa' },\n" +
+      "  signature: 'Rocky Balboa'\n" +
+      '}'
+
+*/
+/*
+const random = Test.randomNumber()
+const obj = {
+	kitchen: {
+		knives: 500,
+		stereo: random,
+		signature: ""
+	},
+	signature: "Rocky Balboa"
+}
+
+const result = {
+  kitchen: {
+    knives: 500,
+    stereo: random,
+    signature: "Rocky Balboa"
+  },
+  signature: "Rocky Balboa"
+};
+
+Test.assertSimilar(signAgain(obj), result)
+*/
