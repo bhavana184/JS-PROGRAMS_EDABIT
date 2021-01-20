@@ -1,0 +1,38 @@
+//https://edabit.com/challenge/3hDDMWvmMQ6pFqqmg
+function thirdMostExpensive(obj) {
+
+  if(Object.keys(obj).length<3) return false
+
+  var val_array= Object.values(obj).sort(function(a, b) {
+
+    return b-a;
+
+    });
+
+  var thirdmax=val_array[2];
+
+  for(var i in obj){
+
+    if(obj[i]==thirdmax)
+
+      return i
+
+  }
+
+}
+/*
+    Test Passed: Value == false
+    Test Passed: Value == false
+    Test Passed: Value == false
+    Test Passed: Value == 'tv'
+    Test Passed: Value == 'piano'
+    Test Passed: Value == 'stereo'
+*/
+/*
+Test.assertEquals(thirdMostExpensive({}), false)
+Test.assertEquals(thirdMostExpensive({piano: 100}), false)
+Test.assertEquals(thirdMostExpensive({piano: 100, stereo: 200 }), false)
+Test.assertEquals(thirdMostExpensive({piano: 100, stereo: 200, tv: 10 }), "tv")
+Test.assertEquals(thirdMostExpensive({piano: 100, stereo: 200, tv: 10, timmy: 500 }), "piano")
+Test.assertEquals(thirdMostExpensive({computer: 1000, piano: 500, stereo: 200, tv: 10, timmy: 1 }), "stereo")
+*/
