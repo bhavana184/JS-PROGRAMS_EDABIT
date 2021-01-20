@@ -1,0 +1,44 @@
+//https://edabit.com/challenge/qrb9Xaapq9b8nstLe
+
+
+function sortList(obj) {
+
+  //Object.keys(obj).sort() : sort keys
+
+  const ordered = Object.keys(obj).sort().reverse().reduce(
+
+  (o, key) => { 
+
+    o[key] = obj[key]; 
+
+    return o;
+
+  }, 
+
+  {}
+
+);
+
+  return ordered
+
+}
+/*
+    Test Passed: Value == '{ d: 50, c: 100, b: 10, a: 50 }'
+    Test Passed: Value == '{ ad: 10, ac: 10, ab: 10 }'
+    Test Passed: Value == '{ suitcase: 1, stereo: 10, piano: 0.9899324316999214 }'
+*/
+/*
+const random = Math.random()
+const obj = {
+    c: 100,
+    a: 50,
+    b: 10,
+    d: 50,
+};
+const obj2 = {ab: 10, ac: 10, ad: 10}
+const obj3 = {piano: random, stereo: 10, suitcase: 1}
+
+Test.assertSimilar(sortList(obj),{ d: 50, c: 100, b: 10, a: 50 })
+Test.assertSimilar(sortList(obj2),{ ad: 10, ac: 10, ab: 10 })
+Test.assertSimilar(sortList(obj3),{ suitcase: 1, stereo: 10, piano: random })
+*/
