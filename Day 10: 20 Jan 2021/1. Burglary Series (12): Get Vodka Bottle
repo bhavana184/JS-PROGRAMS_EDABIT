@@ -1,0 +1,35 @@
+//https://edabit.com/challenge/paMpZoEJ6gr4feMS3
+
+
+function getVodkaBottle(obj, num) {
+
+  var res="";
+
+  for(var i in obj){
+
+    if(num==obj[i] && i.includes("Rammstein")){
+
+      res=res+i;
+
+      break;
+
+    }
+
+  }
+
+  return res
+
+}
+/*
+    Test Passed: Value == 'Rammstein A'
+    Test Passed: Value == 'Rammstein B'
+    Test Passed: Value == 'Rammstein C'
+*/
+/*
+const random = Math.random()
+const obj = {absinth: 100, whiskey: 100, "Rammstein A": 100, "Rammstein B": 50, "Rammstein C": random };
+
+Test.assertEquals(getVodkaBottle(obj, 100),"Rammstein A")
+Test.assertEquals(getVodkaBottle(obj, 50),"Rammstein B")
+Test.assertEquals(getVodkaBottle(obj, random),"Rammstein C")
+*/
