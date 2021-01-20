@@ -1,0 +1,18 @@
+function sumArray(){
+    var len=arguments.length
+    var sum=0;
+    for(var i=0;i<l;i++){
+        var arr=arguments[i];
+        if(typeof arr=="number"){
+                sum=sum+arr;
+            }
+        else if(typeof arr=="object"){
+            for(var j=0;j<arr.length;j++){
+                if(typeof arr[j] =="number"){
+                sum=sum+arr[j]
+               }
+            }
+         }
+     return sum
+ }
+ console.log(sumArray([1,2,[1,2,"a"],"a"])
