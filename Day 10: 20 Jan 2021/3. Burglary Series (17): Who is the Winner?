@@ -1,0 +1,91 @@
+//https://edabit.com/challenge/Zou4ggX2D9w39wJrG
+
+function determineWinnerOfFight(obj) {
+
+  var m=0;var s=0;
+
+  for(var r in obj){
+
+    var round=obj[r];
+
+  
+
+    if(round.me>round.spouse){
+
+      m++;
+
+    }else if(round.me<round.spouse){
+
+      s++;
+
+    }/*else{
+
+      m=0;s=0;
+
+    }*/
+
+  }
+
+  if(m>s)return "ME!"
+
+  else if(s>m)return "SPOUSE!"
+
+  else return "NOBODY!"
+
+}
+/*
+    Test Passed: Value == 'ME!'
+    Test Passed: Value == 'SPOUSE!'
+    Test Passed: Value == 'NOBODY!'
+
+*/
+/*
+const obj = {
+    round1: {
+      me: 10,
+      spouse: 5,
+    },
+    round2: {
+      me: 9,
+      spouse: 9,
+    },
+    round3: {
+      me: 20,
+      spouse: 20,
+    },
+}
+
+const obj2 = {
+    round1: {
+      me: 10,
+      spouse: 5,
+    },
+    round2: {
+      me: 9,
+      spouse: 14,
+    },
+    round3: {
+      me: 10,
+      spouse: 55,
+    },
+}
+
+const obj3 = {
+    round1: {
+      me: 10,
+      spouse: 9,
+    },
+    round2: {
+      me: 11,
+      spouse: 12,
+    },
+    round3: {
+      me: 10,
+      spouse: 10,
+    },
+}
+
+Test.assertEquals(determineWinnerOfFight(obj), "ME!")
+Test.assertEquals(determineWinnerOfFight(obj2), "SPOUSE!")
+Test.assertEquals(determineWinnerOfFight(obj3), "NOBODY!")
+*/
