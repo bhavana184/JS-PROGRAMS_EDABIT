@@ -1,0 +1,80 @@
+//https://edabit.com/challenge/SvodRRbyv7g3LxZsK
+
+
+function determineWhoCursedTheMost(obj) {
+
+  for(var r in obj){
+
+    var round=obj[r];
+
+    var m=0;var s=0;
+
+    if(round.me>round.spouse){
+
+      m=1;s=0;
+
+    }else if(round.me<round.spouse){
+
+      s=1;m=0;
+
+    }else{
+
+      m=0;s=0;
+
+    }
+
+  }
+
+  if(m==1)return "ME!"
+
+  else if(s==1)return "SPOUSE!"
+
+  else return "DRAW!"
+
+}
+/*
+    Test Passed: Value == 'DRAW!'
+    Test Passed: Value == 'ME!'
+    Test Passed: Value == 'SPOUSE!'
+*/
+/*
+const random = Test.randomNumber()
+const obj = {
+	round1: {
+		me: 10,
+		spouse: 5,
+	},
+	round2: {
+		me: 5,
+		spouse: 10,
+	},
+	round3: {
+		me: 10,
+		spouse: 10,
+	},
+};
+const obj2 = {
+	round1: {
+		me: 10,
+		spouse: 5,
+	},
+	round2: {
+		me: random * 100,
+		spouse: 4,
+	},
+};
+const obj3 = {
+	round1: {
+		me: 10,
+		spouse: random * 100,
+	},
+	round2: {
+		me: 9,
+		spouse: 24,
+	},
+};
+
+Test.assertEquals(determineWhoCursedTheMost(obj), "DRAW!")
+Test.assertEquals(determineWhoCursedTheMost(obj2), "ME!")
+Test.assertEquals(determineWhoCursedTheMost(obj3), "SPOUSE!")
+*/
