@@ -1,0 +1,35 @@
+//https://edabit.com/challenge/ZYE9zs95bJrBWpDxg
+
+
+function doubleFactorial(num) {
+
+  if(num==0||num==-1)return 1
+
+  return num*doubleFactorial(num-2)
+
+}
+/*
+    Test Passed: Value == 1
+    Test Passed: Value == 1
+    Test Passed: Value == 1
+    Test Passed: Value == 2
+    Test Passed: Value == 105
+    Test Passed: Value == 945
+    Test Passed: Value == 645120
+    Test Passed: Value == 81749606400
+    Test Passed: Value == 7905853580625
+    Test Passed: Value == 213458046676875
+
+*/
+/*
+Test.assertEquals(doubleFactorial(-1), 1)
+Test.assertEquals(doubleFactorial(0), 1)
+Test.assertEquals(doubleFactorial(1), 1)
+Test.assertEquals(doubleFactorial(2), 2)
+Test.assertEquals(doubleFactorial(7), 105)
+Test.assertEquals(doubleFactorial(9), 945)
+Test.assertEquals(doubleFactorial(14), 645120)
+Test.assertEquals(doubleFactorial(22), 81749606400)
+Test.assertEquals(doubleFactorial(25), 7905853580625)
+Test.assertEquals(doubleFactorial(27), 213458046676875)
+*/
