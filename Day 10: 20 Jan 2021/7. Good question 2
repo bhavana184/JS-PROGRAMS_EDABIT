@@ -8,6 +8,7 @@ function sumArray(a){
       }
       return sum;
   }
+  //flat logic fails for cases like sumArray([1, [2, [1]], 3])
   
   //using recursion
    function sumArray(a){
